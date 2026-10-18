@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" fill="none" stroke="#ffffff" stroke-opacity=".08"/></pattern></defs>
+  <rect width="1200" height="630" fill="#17211d"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <path d="M760 450V190H1020V450M760 270H1020M760 360H1020M850 190V450M940 190V450M720 450H1060" fill="none" stroke="#97ac9d" stroke-width="4"/>
+  <rect x="90" y="105" width="70" height="5" fill="#c18c63"/>
+  <text x="90" y="190" fill="#ffffff" font-family="Arial,sans-serif" font-size="30">H&amp;M Kaba Yapı</text>
+  <text x="90" y="300" fill="#ffffff" font-family="Arial,sans-serif" font-size="60" font-weight="700">Kalıp işçiliği</text>
+  <text x="90" y="375" fill="#d8e0da" font-family="Arial,sans-serif" font-size="60">üzerine notlar</text>
+  <text x="90" y="490" fill="#b6c1b9" font-family="Arial,sans-serif" font-size="24">Kapsam · Metraj · İş programı</text>
+</svg>

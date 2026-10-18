@@ -1,0 +1,245 @@
+.labor-calculator {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+    align-items: start;
+    gap: 32px;
+}
+
+.labor-form-heading h2 {
+    font-size: clamp(32px, 3.5vw, 46px);
+    margin-bottom: 20px;
+}
+
+.labor-form .calc-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.labor-form .calc-group:last-of-type {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.labor-form input, .labor-form select {
+    min-width: 0;
+}
+
+.labor-form input[aria-invalid="true"] {
+    border-color: #8f3021;
+}
+
+.labor-form input:focus-visible, .labor-form select:focus-visible,
+.labor-calculator button:focus-visible, .labor-calculator a:focus-visible {
+    outline: 2px solid var(--rust);
+    outline-offset: 3px;
+}
+
+.labor-extra {
+    margin-top: 20px;
+}
+
+.labor-toggle-first {
+    margin-top: 0;
+}
+
+.labor-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.labor-reset {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px 0;
+}
+
+.labor-summary {
+    min-width: 0;
+    position: sticky;
+    top: 115px;
+}
+
+.labor-summary-card {
+    padding: 36px;
+    background: var(--ink);
+    color: #fff;
+}
+
+.labor-summary-card h2 {
+    margin: 18px 0 26px;
+    font: 700 clamp(28px, 3vw, 38px)/1.2 var(--font-site);
+    letter-spacing: -.02em;
+}
+
+.labor-summary-card [hidden] {
+    display: none;
+}
+
+.labor-project-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 20px 0;
+    border-top: 1px solid #ffffff26;
+    border-bottom: 1px solid #ffffff26;
+    margin-bottom: 10px;
+}
+
+.labor-project-facts span, .labor-project-facts strong {
+    display: block;
+}
+
+.labor-project-facts span {
+    font-size: 14px;
+    color: #bfc5bd;
+    margin-bottom: 8px;
+}
+
+.labor-project-facts strong {
+    font: 500 21px var(--font-site);
+}
+
+.labor-line {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 14px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ffffff26;
+}
+
+.labor-line h3 {
+    margin: 0 0 8px;
+    font: 500 16px var(--font-site);
+}
+
+.labor-line span {
+    display: block;
+    color: #bfc5bd;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.labor-line > strong {
+    font-size: 16px;
+    text-align: right;
+    overflow-wrap: anywhere;
+    max-width: 170px;
+}
+
+.labor-subtotals, .labor-unit-costs {
+    margin: 22px 0;
+    font-size: 15px;
+}
+
+.labor-subtotals div, .labor-unit-costs div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 15px;
+    margin: 12px 0;
+}
+
+.labor-subtotals dt, .labor-unit-costs dt {
+    color: #bfc5bd;
+}
+
+.labor-subtotals dd, .labor-unit-costs dd {
+    margin: 0;
+    font-weight: 500;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.labor-total {
+    padding: 24px 0;
+    border-top: 1px solid #ffffff26;
+    border-bottom: 1px solid #ffffff26;
+}
+
+.labor-total > span {
+    color: #bfc5bd;
+    font-size: 15px;
+}
+
+.labor-total > strong {
+    display: block;
+    font: 500 clamp(30px, 3.7vw, 48px)/1.2 var(--font-site);
+    color: var(--sand);
+    letter-spacing: -.02em;
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+
+.labor-total p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #bfc5bd;
+    margin: 0;
+}
+
+.labor-summary-card .button {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.labor-scope {
+    padding: 26px 8px 0;
+}
+
+.labor-scope h3 {
+    font: 500 18px var(--font-site);
+    margin: 0 0 14px;
+}
+
+.labor-scope p {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0 0 15px;
+}
+
+@media (max-width: 1050px) {
+    .labor-calculator {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .labor-summary {
+        position: static;
+    }
+}
+
+@media (max-width: 520px) {
+    .labor-form .calc-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .labor-summary-card {
+        padding: 26px 20px;
+    }
+
+    .labor-project-facts {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .labor-line {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .labor-line > strong {
+        max-width: none;
+        text-align: left;
+    }
+
+    .labor-actions .button {
+        width: 100%;
+        justify-content: space-between;
+        padding: 18px;
+    }
+}

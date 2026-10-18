@@ -1,0 +1,55 @@
+# Private backups, generated reports and release packages
+/.private/
+/.agents/
+/.codex/
+/project_memory.md
+/SEO-DENETIMI-*.md
+/SEO-UYGULAMA-*.md
+/SEO-HAFTALIK-RAPOR.csv
+/SEO-IS-PLANI.csv
+/HIZMET-ICERIK-INCELEMESI-*.md
+/YAYIN-HAZIRLIK-*.md
+
+# Environment files and credentials (configuration reads server environment)
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# Database exports; database.sql is the example installation schema/seed
+*.sql
+!database.sql
+*.sql.*
+
+# Runtime uploads are server data; retain only bundled demo assets
+/uploads/*
+!/uploads/demo/
+/uploads/demo/gallery-generation.json
+
+# Generated archives, dependencies and temporary/editor files
+*.zip
+*.7z
+*.tar
+*.gz
+*.log
+*.bak
+*.old
+*.orig
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+node_modules/
+vendor/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
