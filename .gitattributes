@@ -31,3 +31,5 @@
 *.[mM][dD] export-ignore
 *.sql export-ignore
 /uploads/demo/gallery-generation.json export-ignore
+/config/local.php export-ignore
+hmkabayapi-config.php export-ignore

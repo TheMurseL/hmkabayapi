@@ -3,7 +3,22 @@
 declare(strict_types=1);
 date_default_timezone_set('UTC');
 
-if (getenv('APP_ENV') === 'production') {
+// Hide configuration/connection details before loading a live private file.
+if (PHP_SAPI !== 'cli' && !in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1'], true)) {
+    ini_set('display_errors', '0');
+    ini_set('display_startup_errors', '0');
+    ini_set('log_errors', '1');
+}
+require_once __DIR__ . '/Environment.php';
+
+function app_env(string $name, string $fallback = ''): string
+{
+    static $environment;
+    $environment ??= new AppEnvironment(dirname(__DIR__));
+    return $environment->get($name, $fallback);
+}
+
+if (app_env('APP_ENV', 'local') === 'production') {
     ini_set('display_errors', '0');
     ini_set('display_startup_errors', '0');
     ini_set('log_errors', '1');
@@ -24,20 +39,20 @@ function config(string $key, mixed $default = null): mixed
 {
     static $values;
     $values ??= [
-        'site_url' => rtrim(getenv('SITE_URL') ?: 'http://localhost/insaat', '/'),
+        'site_url' => rtrim(app_env('SITE_URL', 'http://localhost/insaat'), '/'),
         'site_name' => 'H&M Kaba Yapı',
-        'db_host' => getenv('DB_HOST') ?: '127.0.0.1',
-        'db_name' => getenv('DB_NAME') ?: 'insaat_portfolio',
-        'db_user' => getenv('DB_USER') ?: 'root',
-        'db_pass' => getenv('DB_PASS') ?: '',
-        'app_env' => getenv('APP_ENV') ?: 'local',
-        'trusted_proxies' => getenv('TRUSTED_PROXIES') ?: '',
+        'db_host' => app_env('DB_HOST', '127.0.0.1'),
+        'db_name' => app_env('DB_NAME', 'insaat_portfolio'),
+        'db_user' => app_env('DB_USER', 'root'),
+        'db_pass' => app_env('DB_PASS'),
+        'app_env' => app_env('APP_ENV', 'local'),
+        'trusted_proxies' => app_env('TRUSTED_PROXIES'),
     ];
     if ($key === 'site_name') {
         return site_setting('business_name') ?: $values[$key];
     }
     if ($key === 'site_url') {
-        $configured = getenv('SITE_URL') ?: site_setting('site_url');
+        $configured = app_env('SITE_URL') ?: site_setting('site_url');
         if ($configured && filter_var($configured, FILTER_VALIDATE_URL) && in_array(parse_url($configured, PHP_URL_SCHEME), ['http', 'https'], true)) {
             return rtrim($configured, '/');
         }

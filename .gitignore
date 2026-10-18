@@ -50,6 +50,8 @@
 !/uploads/demo/**/*.webp
 
 # Never allow credentials, private data, or development files in allowed folders.
+/config/local.php
+hmkabayapi-config.php
 **/.*/
 .env
 .env.*
