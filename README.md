@@ -2,7 +2,7 @@
 
 Kaba inşaat ve uygulama sitesi. PHP 8+, MySQL ve Apache üzerinde çalışır. Kalıp, demir ve beton uygulamaları yapılır; tuğla duvar ve çatı işleri talebe göre değerlendirilir. Malzeme, ekipman ve saha hazırlığı sorumlulukları proje teklifinde belirlenir.
 
-Git deposu kaynak kodu, testleri, bakım scriptlerini ve `uploads/demo/` altındaki örnek görselleri içerir. `README.md` dışındaki Markdown belgeleri, SQL dosyaları, gerçek veritabanı, sunucuya yüklenen görseller, erişim bilgileri, `.private/` yedekleri ve yerel çalışma raporları repoya alınmaz. Yerelde saklanan `database.sql` güncel veritabanının yedeği değil, yeni kurulum için örnek şema ve başlangıç verisidir; kurulum için ayrıca temin edilmelidir. Ortam değişkenlerini sunucu yapılandırmasında tanımlayın; uygulama `.env` dosyasını otomatik okumaz. GitHub'a kod göndermek tek başına canlı siteyi güncellemez; bu depoda otomatik dağıtım henüz yapılandırılmamıştır.
+Git deposu kaynak kodu, testleri, bakım scriptlerini, güncel kullanım belgelerini ve `uploads/demo/` altındaki örnek görselleri içerir. `database.sql`, yeni kurulum için örnek şema ve demo başlangıç verisidir; güncel veritabanının yedeği değildir. Gerçek veritabanı dökümleri, sunucuya yüklenen görseller, erişim bilgileri, `.private/` yedekleri, loglar ve yerel çalışma raporları repoya alınmaz. Ortam değişkenlerini sunucu yapılandırmasında tanımlayın; uygulama `.env` dosyasını otomatik okumaz. GitHub'a kod göndermek tek başına canlı siteyi güncellemez; bu depoda otomatik dağıtım henüz yapılandırılmamıştır.
 
 Yerel test için `C:/xampp/php/php.exe scripts/prepare-preview-content.php` komutu, eksik ayarlara İstanbul'un tüm ilçelerini ve ahşap kalıp test görsellerini ekler; production ortamında çalışmaz. Mevcut ayarlar ve yüklenmiş proje fotoğrafları korunur. Geçici iletişim numarası eklenmez. **SEO & site ayarları** bölümünden gerçek numara, e-posta, çalışma bölgesi, ilçe listesi ve anasayfa görseli değiştirilebilir. Numara boş veya bilinen geçici değerse WhatsApp bağlantıları gizlenir. Proje fotoğrafları **Projeler → Düzenle** ekranından yönetilir.
 
@@ -11,7 +11,7 @@ Test görselleri yerleşik `image_gen` ile üretildi: `uploads/demo/ahsap-kalip-
 ## Kurulum
 
 1. XAMPP üzerinde Apache ve MySQL'i başlatın.
-2. Git deposuna dahil edilmeyen `database.sql` kurulum dosyasını güvenli bir kanaldan temin edip yeni veritabanına phpMyAdmin üzerinden içe aktarın.
+2. Yalnızca yeni kurulumda repodaki `database.sql` dosyasını phpMyAdmin üzerinden içe aktarın; gerçek veritabanını bu örnek dosyayla değiştirmeyin.
 3. Gerekirse `SITE_URL`, `DB_HOST`, `DB_NAME`, `DB_USER` ve `DB_PASS` ortam değişkenlerini tanımlayın. Varsayılan değerler yerel XAMPP kurulumu içindir. `APP_ENV` varsayılanı `local` olur.
 4. `C:/xampp/php/php.exe scripts/migrate.php` ile şemayı güncelleyin. Mevcut kurulumlarda SQL dosyasını yeniden içe aktarmayın.
 5. `C:/xampp/php/php.exe scripts/prepare-seo-content.php` ile örnekleri işaretleyin ve üç karar rehberini ekleyin. Düzenlenmiş kayıtlar korunur; işlem tekrar çalıştırılabilir.
@@ -43,7 +43,7 @@ Projeler ve blog ekranları listeyle açılır. **Proje ekle / Yazı oluştur** 
 - **Projeler:** yapı türü, iş kapsamı, metraj, çalışma süreci, saha koşulları ve teslim sonucu alanlarını doldurun. İlgili hizmetleri seçerek karşılıklı bağlantı oluşturun.
 - **Proje fotoğrafları:** Vitrin görseli hem proje listesinde hem detayın başında görünür. Yeni proje oluştururken veya düzenlerken “Diğer proje görselleri” alanından çoklu yükleme yapılabilir; mevcut fotoğraflara eklenir ve vitrinin altında küçük galeri olarak gösterilir. Galerideki “Vitrin yap” düğmesi seçilen fotoğrafla vitrini değiştirir; önceki vitrin fotoğrafını galeride korur.
 - Şema güncellemesi yalnızca `scripts/migrate.php` komutuyla yapılır; normal ziyaretlerde DDL veya seed çalışmaz. Güncellemeden önce veritabanını yedekleyin.
-- Ek kullanım ayrıntıları yerelde saklanan `SEO.md` belgesindedir; bu belge Git deposuna dahil edilmez.
+- Ek kullanım ayrıntıları: [SEO.md](SEO.md).
 
 İçerik kaynakları `app/content/core-services.php` ve `app/content/specialist-services.php` içindedir. **18.10.2026 güncel kapsamı kalıp, demir ve beton uygulamalarıdır.** `C:/xampp/php/php.exe scripts/update-service-content.php` bu kapsamın hizmet, tanıtıcı blog ve site açıklaması güncellemesini yerel kurulumda bir kez uygular; aynı sürüm tekrar çalıştırıldığında panel düzenlemelerini ezmez. Önceki içerikler ve ilişkiler `.private/backups/` altında yedeklenir.
 
@@ -62,5 +62,7 @@ Yerelde indeksleme ve GA4 yüklemesi kapalıdır. Tarihli denetim ve yayın haz�
 Yönetici parolası **SEO & site ayarları → Yönetici parolası** formundan mevcut parola doğrulanarak değiştirilebilir; kurulum parolasıyla yayına çıkılmamalıdır. Yerel kullanıcı hesabı bu çalışma sırasında değiştirilmedi.
 
 Yayın dosyası oluşturma: `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-release.ps1`. Bu komut yalnızca ilgili PowerShell süreci için yürütme seçeneğini belirler; sistem politikasını değiştirmez. Doğrudan `.private/releases/` altında SHA256 manifestli kod/medya ZIP'i üretir. Paket; SQL, yedek, test, bakım betiği ve geliştirme raporlarını içermez. Veritabanı ayrı ve korumalı biçimde taşınır; hostingte DB ortam değişkenleri, gerçek HTTPS `SITE_URL` ve yayın koşulları ayrıca ayarlanmalıdır. Paket oluşturmak canlı yayın yapmaz.
+
+Geliştirme için depoyu `git clone` ile alın. Canlı sunucuya repo kökünü ve `.git` klasörünü doğrudan kopyalamayın; yayın scriptinin oluşturduğu paketi aktarın. `.gitignore`, yalnızca kaynak kontrolüne alınacak dosyaları belirler ve dağıtım filtresi değildir. `.gitattributes` içindeki `export-ignore` kuralları da `git archive` çıktısından testleri, bakım scriptlerini, belgeleri, örnek SQL'i ve geliştirme yapılandırmalarını çıkarır; normal `git clone`/`git pull` işlemlerinde bu dosyalar kalır. Sonraki dağıtımlarda canlı veritabanını ve admin panelinden yüklenmiş görselleri koruyun; gerekli veritabanı değişikliklerini ayrı bir bakım adımı olarak uygulayın.
 
 Yerel Chrome arayüz testi: `tests/admin-browser.ps1`. Test hesabının şifresini `INSAAT_TEST_PASSWORD` ortam değişkeniyle verin; varsayılan test e-postası mevcut yerel yönetici hesabıdır, `-Email` ile değiştirilebilir. Araç giriş, altı bölümün masaüstü/mobil görünümü, liste araması, yeni kayıt formları, şifre gösterme ve hizmet satırı düğmelerini kontrol eder; içerik kaydetmez. Ekran görüntüleri geçici dizinde tutulur; izole tarayıcı profili test sonunda silinir.

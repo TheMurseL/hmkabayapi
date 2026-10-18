@@ -2,12 +2,14 @@
 /.private/
 /.agents/
 /.codex/
+/.aws/
+/project_memory.md
+/SEO-DENETIMI-*.md
+/SEO-UYGULAMA-*.md
+/HIZMET-ICERIK-INCELEMESI-*.md
+/YAYIN-HAZIRLIK-*.md
 /SEO-HAFTALIK-RAPOR.csv
 /SEO-IS-PLANI.csv
-
-# Markdown documents stay local except the root README
-*.[mM][dD]
-!/README.md
 
 # Environment files and credentials (configuration reads server environment)
 .env
@@ -21,14 +23,17 @@
 credentials.json
 secrets.json
 
-# Database schemas and exports stay local
+# Only the reviewed example installation schema belongs in source control
 *.sql
+!/database.sql
 *.sql.*
+*.dump
+*.sqlite
+*.sqlite3
 
 # Runtime uploads are server data; retain only bundled demo assets
 /uploads/*
 !/uploads/demo/
-/uploads/demo/gallery-generation.json
 
 # Generated archives, dependencies and temporary/editor files
 *.zip

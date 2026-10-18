@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-17",
+  "mode": "built-in image_gen",
+  "purpose": "Synthetic demo gallery images shared by the three sample projects; not real work references.",
+  "assets": [
+    {
+      "file": "gallery/ahsap-kalip-temel-kalibi.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: construction website demo project gallery, a single landscape 4:3 photo. Primary request: Ground-level wide photograph of carefully aligned timber board formwork for strip footings at an early-stage low-rise building site. Show actual rough sawn wood boards, timber stakes and diagonal braces, prepared ground; no concrete pouring. Style: natural documentary construction photography, realistic timber geometry and textures, soft daytime light, subdued authentic colors. Constraints: one continuous photograph, no collage, no panels, no text, no watermark, no logos, no identifiable people. This is synthetic placeholder imagery for demo projects, not evidence of a real completed job. Generate a landscape image. Save the result as an image file and provide its local path."
+    },
+    {
+      "file": "gallery/ahsap-kalip-kolon-kalibi.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: construction website demo project gallery, a single landscape 4:3 photo. Primary request: Medium close-up photograph of a vertical square column form being assembled from rough timber planks, with wooden cleats, aligned corners and diagonal timber bracing. Surroundings are a low-rise building frame, no people. Style: natural documentary construction photography, realistic timber geometry and textures, soft daytime light, subdued authentic colors. Constraints: one continuous photograph, no collage, no panels, no text, no watermark, no logos, no identifiable people. This is synthetic placeholder imagery for demo projects, not evidence of a real completed job. Generate a landscape image. Save the result as an image file and provide its local path."
+    },
+    {
+      "file": "gallery/ahsap-kalip-kiris-kalibi.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: construction website demo project gallery, a single landscape 4:3 photo. Primary request: Photograph looking along a timber beam formwork assembly: bottom plank, two timber side boards and sturdy temporary timber supports. The timber joinery and straight beam line are clear, no concrete pouring. Style: natural documentary construction photography, realistic timber geometry and textures, soft daytime light, subdued authentic colors. Constraints: one continuous photograph, no collage, no panels, no text, no watermark, no logos, no identifiable people. This is synthetic placeholder imagery for demo projects, not evidence of a real completed job. Generate a landscape image. Save the result as an image file and provide its local path."
+    },
+    {
+      "file": "gallery/ahsap-kalip-doseme-kalibi.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: construction website demo project gallery, a single landscape 4:3 photo. Primary request: Wide interior photograph from below a floor slab timber formwork deck at a low-rise construction site: orderly wooden posts, timber joists and rough sawn board decking above. Stable realistic construction, natural daylight. Style: natural documentary construction photography, realistic timber geometry and textures, soft daytime light, subdued authentic colors. Constraints: one continuous photograph, no collage, no panels, no text, no watermark, no logos, no identifiable people. This is synthetic placeholder imagery for demo projects, not evidence of a real completed job. Generate a landscape image. Save the result as an image file and provide its local path."
+    },
+    {
+      "file": "gallery/ahsap-kalip-merdiven-kalibi.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: construction website demo project gallery, a single landscape 4:3 photo. Primary request: Three-quarter photograph of timber formwork for a straight residential staircase under construction, rough sawn wooden riser boards, sloped timber soffit and careful timber support bracing. Show empty forms before concrete, no people. Style: natural documentary construction photography, realistic timber geometry and textures, soft daytime light, subdued authentic colors. Constraints: one continuous photograph, no collage, no panels, no text, no watermark, no logos, no identifiable people. This is synthetic placeholder imagery for demo projects, not evidence of a real completed job. Generate a landscape image. Save the result as an image file and provide its local path."
+    },
+    {
+      "file": "gallery/ahsap-kalip-kalip-birlestirme.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: construction website demo project gallery, a single landscape 4:3 photo. Primary request: Close-up construction detail photograph of a clean corner junction in timber formwork: grain of rough sawn pine planks, nails, timber battens and diagonal brace, realistic saw marks, practical professional workmanship. Style: natural documentary construction photography, realistic timber geometry and textures, soft daytime light, subdued authentic colors. Constraints: one continuous photograph, no collage, no panels, no text, no watermark, no logos, no identifiable people. This is synthetic placeholder imagery for demo projects, not evidence of a real completed job. Generate a landscape image. Save the result as an image file and provide its local path."
+    },
+    {
+      "file": "gallery/ahsap-kalip-kereste-hazirlik.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: construction website demo project gallery, a single landscape 4:3 photo. Primary request: Natural construction site photograph of neatly sorted timber formwork boards and wooden battens on supports next to a partly assembled low-rise timber formwork structure. Practical working area, no signs, no people. Style: natural documentary construction photography, realistic timber geometry and textures, soft daytime light, subdued authentic colors. Constraints: one continuous photograph, no collage, no panels, no text, no watermark, no logos, no identifiable people. This is synthetic placeholder imagery for demo projects, not evidence of a real completed job. Generate a landscape image. Save the result as an image file and provide its local path."
+    },
+    {
+      "file": "gallery/ahsap-kalip-kalip-genel-saha.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: construction website demo project gallery, a single landscape 4:3 photo. Primary request: Elevated oblique wide photograph of a modest residential building construction site showing timber column and beam formwork, orderly timber braces and deck boards, surrounding Istanbul-style low-rise urban residential setting without recognizable landmarks. Focus on timber formwork workmanship, no concrete pouring. Style: natural documentary construction photography, realistic timber geometry and textures, soft daytime light, subdued authentic colors. Constraints: one continuous photograph, no collage, no panels, no text, no watermark, no logos, no identifiable people. This is synthetic placeholder imagery for demo projects, not evidence of a real completed job. Generate a landscape image. Save the result as an image file and provide its local path."
+    }
+  ]
+}
