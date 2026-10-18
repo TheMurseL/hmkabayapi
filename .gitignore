@@ -2,13 +2,11 @@
 /.private/
 /.agents/
 /.codex/
-/project_memory.md
-/SEO-DENETIMI-*.md
-/SEO-UYGULAMA-*.md
 /SEO-HAFTALIK-RAPOR.csv
 /SEO-IS-PLANI.csv
-/HIZMET-ICERIK-INCELEMESI-*.md
-/YAYIN-HAZIRLIK-*.md
+
+# Markdown documents stay local at every directory level
+*.[mM][dD]
 
 # Environment files and credentials (configuration reads server environment)
 .env
@@ -22,9 +20,8 @@
 credentials.json
 secrets.json
 
-# Database exports; database.sql is the example installation schema/seed
+# Database schemas and exports stay local
 *.sql
-!database.sql
 *.sql.*
 
 # Runtime uploads are server data; retain only bundled demo assets
