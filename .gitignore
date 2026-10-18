@@ -5,8 +5,9 @@
 /SEO-HAFTALIK-RAPOR.csv
 /SEO-IS-PLANI.csv
 
-# Markdown documents stay local at every directory level
+# Markdown documents stay local except the root README
 *.[mM][dD]
+!/README.md
 
 # Environment files and credentials (configuration reads server environment)
 .env
